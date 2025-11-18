@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pro LaTeX Resume Builder</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Monaco Editor CDN -->
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Pro LaTeX Resume Builder</h1>
+    <p>Monaco Editor • Dark Mode • Autosave • GitHub Pages Ready</p>
+
+    <button id="themeToggle">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+    <div class="editor">
+        <h3>LaTeX Editor</h3>
+        <div id="editor" class="editorBox"></div>
+
+        <div class="buttons">
+            <button onclick="compileLaTeX()">Preview PDF</button>
+            <button onclick="downloadTex()">Download .tex</button>
+            <button onclick="downloadMarkdown()">Download .md</button>
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </div>
+
+    <div class="preview">
+        <h3>PDF Preview</h3>
+        <iframe id="pdfViewer"></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
